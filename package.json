@@ -16,7 +16,9 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "lint": "eslint -c './.eslintrc' --fix './src/**/*{.ts,.tsx}'"
+    "lint": "eslint -c './.eslintrc' --fix './src/**/*{.ts,.tsx}'",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -39,7 +41,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts-ts": "^4.0.8",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
@@ -74,5 +77,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "snyk": true
 }
